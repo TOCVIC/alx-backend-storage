@@ -47,17 +47,7 @@ def call_history(method: Callable) -> Callable:
 
 def replay(fn: Callable) -> None:
     '''Displays the call history of a Cache class' method.
-   
-    This function takes a method (fn) as an argument and displays the call history
-    of that method. It retrieves the method's call count and the input and output
-    data from a Redis store, assuming the method is associated with a Cache class
-    that uses Redis for caching.
-
-    Args:
-        fn (Callable): The method to display the call history for.
-
-    Returns:
-        None: The function does not return anything; it prints the call history.
+    This function takes a method (fn) as an argument and displays the call history of that method.
     '''
     if fn is None or not hasattr(fn, '__self__'):
         return
