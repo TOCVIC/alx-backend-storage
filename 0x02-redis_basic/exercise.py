@@ -58,7 +58,6 @@ def replay(fn: Callable) -> None:
 
     Returns:
         None: The function does not return anything; it prints the call history.
-
     '''
     if fn is None or not hasattr(fn, '__self__'):
         return
